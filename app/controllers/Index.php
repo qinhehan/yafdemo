@@ -8,6 +8,7 @@
 
 use Yaf\Controller_Abstract as YafController;
 
+
 class IndexController extends YafController
 {
 
@@ -19,6 +20,7 @@ class IndexController extends YafController
 
 	public function indexAction()
 	{
+
 
 	}
 

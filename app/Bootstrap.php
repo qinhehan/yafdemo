@@ -23,9 +23,14 @@ class Bootstrap extends YafBootstrap
 		Yaf\Registry::set('config', $this->config);
 	}
 
-//	//载入方法库
-//	public function _initLibrary()
-//	{
-//		Yaf_Loader::import('Function.php');
-//	}
+	/**
+	 * autoload.
+	 *
+	 * @param Dispatcher $dispatcher [description]
+	 */
+	public function _initLoader(Dispatcher $dispatcher)
+	{
+		$loader = \Yaf\Loader::getInstance();
+		$loader->import(ROOT_PATH . 'vendor' . DS . 'autoload.php');
+	}
 }
